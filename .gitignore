@@ -1,6 +1,5 @@
 node_modules
-build
-.build
 dist
 .DS_Store
 *.log
+.rollup.cache
