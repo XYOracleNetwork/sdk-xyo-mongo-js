@@ -440,10 +440,10 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.0.11.tgz#20d22dd0da7d358bb21c17f9bde8628152642c77"
   integrity sha512-b+zB8A2so8eCE0JsxjL24J7vdGl8rzPQ09hZNhystm+KqSbKcAej1A+Hbva1rCMmTTqA+hFnUSDc5kouEo0JzA==
 
-"@xyo-network/sdk-xyo-js@^2.0.12":
-  version "2.0.12"
-  resolved "https://registry.yarnpkg.com/@xyo-network/sdk-xyo-js/-/sdk-xyo-js-2.0.12.tgz#0cc294167fbe79fa177f1ec63ac59d71d0dc0a88"
-  integrity sha512-IsYXcxFKMKcA7wzGEjqKS1wx3EaFF/sXClsYpON2Pd8nJ8jagjCR6DDgd3uB+19JkzlHaQknBufiE3/7G/Sj1Q==
+"@xyo-network/sdk-xyo-js@^2.0.13":
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/@xyo-network/sdk-xyo-js/-/sdk-xyo-js-2.0.13.tgz#aca4813b3bef4686385e3a7e4aacfdd17ce6caf8"
+  integrity sha512-Cd8YA979ijh/B64QjAQB/LJ+BApD6z1ORCkeSSX2zJboxh60JkM12hiQyB0xyMwvrn31cQUhge4DidSJoiQb8A==
   dependencies:
     axios "^0.21.1"
     rollbar "^2.21.1"
