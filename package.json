@@ -23,7 +23,7 @@
   "types": "dist/index.d.js",
   "sideEffects": false,
   "dependencies": {
-    "@xyo-network/sdk-xyo-js": "^2.0.21",
+    "@xyo-network/sdk-xyo-js": "^2.0.22",
     "async-mutex": "^0.3.1",
     "mongodb": "^3.6.5"
   },
