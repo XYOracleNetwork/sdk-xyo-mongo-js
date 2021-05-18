@@ -15,7 +15,7 @@ class BaseMongoSdk<T> {
   }
 
   protected async useMongo<R>(func: (client: MongoClient) => Promise<R | null>) {
-    const wrapper = MongoClientWrapper.get(this.uri)
+    const wrapper = MongoClientWrapper.get(this.uri, this.config.poolSize)
     const connection = await wrapper.connect()
     if (connection) {
       try {
