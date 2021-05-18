@@ -10,9 +10,9 @@ class MongoClientWrapper {
   private connected = false
   private uri: string
 
-  constructor(uri: string) {
+  constructor(uri: string, poolSize?: number) {
     this.uri = uri
-    this.client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+    this.client = new MongoClient(uri, { poolSize, useNewUrlParser: true, useUnifiedTopology: true })
   }
 
   async connect() {
@@ -77,10 +77,10 @@ class MongoClientWrapper {
 
   static clients = new Map<string, MongoClientWrapper>()
 
-  static get(uri: string) {
+  static get(uri: string, poolSize?: number) {
     let client = this.clients.get(uri)
     if (!client) {
-      client = new MongoClientWrapper(uri)
+      client = new MongoClientWrapper(uri, poolSize)
       this.clients.set(uri, client)
     }
     return client
