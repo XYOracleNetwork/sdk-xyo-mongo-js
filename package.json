@@ -19,10 +19,10 @@
     "url": "https://github.com/XYOracleNetwork/sdk-xyo-mongo-js.git"
   },
   "main": "./index.cjs.js",
-  "module": "./index.esm.js",
+  "module": "./index.js",
   "types": "./index.d.js",
   "exports": {
-    ".": "./index.esm.js"
+    ".": "./index.js"
   },
   "sideEffects": false,
   "dependencies": {
