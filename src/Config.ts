@@ -4,7 +4,7 @@ interface BaseMongoSdkConfig {
   dbName: string
   dbPassword: string
   dbUserName: string
-  poolSize?: number
+  maxPoolSize?: number
 }
 
 export default BaseMongoSdkConfig

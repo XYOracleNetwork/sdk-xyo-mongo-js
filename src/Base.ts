@@ -14,8 +14,8 @@ class BaseMongoSdk<T> {
     return `mongodb+srv://${this.config.dbUserName}:${this.config.dbPassword}@${this.config.dbDomain}.mongodb.net/${this.config.dbName}?retryWrites=true&w=majority`
   }
 
-  protected async useMongo<R>(func: (client: MongoClient) => Promise<R | null>) {
-    const wrapper = MongoClientWrapper.get(this.uri, this.config.poolSize)
+  protected async useMongo<R>(func: (client: MongoClient) => Promise<R>) {
+    const wrapper = MongoClientWrapper.get(this.uri, this.config.maxPoolSize)
     const connection = await wrapper.connect()
     if (connection) {
       try {
@@ -26,7 +26,7 @@ class BaseMongoSdk<T> {
     }
   }
 
-  protected async useCollection<R>(func: (collection: Collection<T>) => Promise<R | null>) {
+  protected async useCollection<R>(func: (collection: Collection<T>) => Promise<R>) {
     return await this.useMongo<R>(async (client: MongoClient) => {
       return await func(client.db(this.config.dbName).collection<T>(this.config.collection))
     })
