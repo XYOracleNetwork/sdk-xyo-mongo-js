@@ -10,9 +10,9 @@ class MongoClientWrapper {
   private connected = false
   private uri: string
 
-  constructor(uri: string, poolSize?: number) {
+  constructor(uri: string, maxPoolSize?: number) {
     this.uri = uri
-    this.client = new MongoClient(uri, { poolSize, useNewUrlParser: true, useUnifiedTopology: true })
+    this.client = new MongoClient(uri, { maxPoolSize })
   }
 
   async connect() {
