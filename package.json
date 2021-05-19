@@ -1,6 +1,6 @@
 {
   "name": "@xyo-network/sdk-xyo-mongo-js",
-  "version": "2.0.22",
+  "version": "2.1.0",
   "homepage": "https://xyo.network",
   "bugs": {
     "url": "https://github.com/XYOracleNetwork/sdk-xyo-mongo-js/issues",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@xyo-network/sdk-xyo-js": "^2.1.6",
     "async-mutex": "^0.3.1",
-    "mongodb": "^3.6.5"
+    "mongodb": "^4.0.0-beta.4"
   },
   "scripts": {
     "build": "rm -r -f dist && yarn deps && yarn lint && yarn compile && yarn copy-src",
