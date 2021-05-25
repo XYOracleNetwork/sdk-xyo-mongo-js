@@ -1,22 +1,21 @@
-import typescript from 'rollup-plugin-typescript2'
+import typescript from '@rollup/plugin-typescript'
 
 export default [
   {
-    input: './src/index.ts',
+    external: ['axios', 'rollbar'],
+    input: 'src/index.ts',
     output: [
       {
-        exports: 'auto',
-        file: './dist/index.cjs',
+        file: 'dist/index.cjs.js',
         format: 'cjs',
         sourcemap: true,
       },
       {
-        exports: 'auto',
-        file: './dist/index.mjs',
+        file: 'dist/index.mjs.js',
         format: 'es',
         sourcemap: true,
       },
     ],
-    plugins: [typescript()],
+    plugins: [typescript({ tsconfig: './tsconfig.json' })],
   },
 ]
