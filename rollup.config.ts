@@ -2,7 +2,7 @@ import typescript from '@rollup/plugin-typescript'
 
 export default [
   {
-    external: ['axios', 'rollbar'],
+    external: ['axios', 'rollbar', '@xyo-network/sdk-xyo-js', 'async-mutex', 'mongodb'],
     input: 'src/index.ts',
     output: [
       {
@@ -11,7 +11,7 @@ export default [
         sourcemap: true,
       },
       {
-        file: 'dist/index.mjs.js',
+        file: 'dist/index.js',
         format: 'es',
         sourcemap: true,
       },
