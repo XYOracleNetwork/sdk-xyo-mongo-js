@@ -26,7 +26,8 @@
   "dependencies": {
     "@xyo-network/sdk-xyo-js": "^2.1.14",
     "async-mutex": "^0.3.1",
-    "mongodb": "^4.0.0-beta.4"
+    "mongodb": "^4.0.0-beta.4",
+    "tslib": "^2.2.0"
   },
   "scripts": {
     "build": "rm -r -f dist && yarn deps && yarn lint && yarn compile && yarn copy-src",
