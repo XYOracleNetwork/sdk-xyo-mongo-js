@@ -2,7 +2,7 @@ import typescript from '@rollup/plugin-typescript'
 
 export default [
   {
-    external: ['axios', 'rollbar', '@xyo-network/sdk-xyo-js', 'async-mutex', 'mongodb'],
+    external: ['axios', 'tslib', '@xyo-network/sdk-xyo-js', 'async-mutex', 'mongodb'],
     input: 'src/index.ts',
     output: [
       {
