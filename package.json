@@ -1,6 +1,6 @@
 {
   "name": "@xyo-network/sdk-xyo-mongo-js",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "homepage": "https://xyo.network",
   "bugs": {
     "url": "https://github.com/XYOracleNetwork/sdk-xyo-mongo-js/issues",
@@ -21,7 +21,22 @@
   "main": "./index.cjs",
   "module": "./index.js",
   "types": "./index.d.ts",
-  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    },
+    "./": {
+      "require": "./index.cjs",
+      "default": "./index.js"
+    }
+  },
+  "keywords": [
+    "xyo",
+    "utility",
+    "typescript",
+    "mongo"
+  ],
   "sideEffects": false,
   "dependencies": {
     "@xyo-network/sdk-xyo-js": "^2.1.15",
@@ -31,7 +46,7 @@
   },
   "scripts": {
     "build": "rm -r -f dist && yarn deps && yarn lint && yarn compile && yarn copy-src",
-    "copy-src": "cp package.json ./dist",
+    "copy-src": "mkdir -p dist && cp package.json dist && cp README.md dist && cp LICENSE dist && cp -R src dist",
     "compile": "rollup -c rollup.config.ts",
     "deploy": "yarn version --patch && yarn build && yarn publish ./dist --access public",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
@@ -43,6 +58,7 @@
     "deps": "yarn depcheck --ignores \"vue, ts-jest, @types/jest, @types/node, ts-node\""
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-typescript": "^8.2.1",
     "@types/jest": "^26.0.22",
     "@types/node": "^15.6.1",
