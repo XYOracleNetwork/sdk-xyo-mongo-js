@@ -2,7 +2,6 @@
   "compilerOptions": {
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
     "target": "es6",
@@ -19,5 +18,5 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "skipLibCheck": true
-  }
+  },
 }
