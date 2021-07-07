@@ -42,7 +42,7 @@
     "@xyo-network/sdk-xyo-js": "^2.1.15",
     "async-mutex": "^0.3.1",
     "axios": "^0.21.1",
-    "mongodb": "^4.0.0-beta.5",
+    "mongodb": "^4.0.0-beta.6",
     "tslib": "^2.2.0"
   },
   "scripts": {
@@ -78,6 +78,7 @@
     "eslint-plugin-workspaces": "^0.6.2",
     "jest": "^27.0.1",
     "prettier": "^2.2.1",
+    "rollbar": "^2.24.0",
     "rollup": "^2.42.4",
     "ts-jest": "^27.0.0",
     "ts-node": "^10.0.0",
