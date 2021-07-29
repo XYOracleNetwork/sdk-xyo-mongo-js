@@ -38,6 +38,9 @@
     "mongo"
   ],
   "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@xyo-network/sdk-xyo-js": "^2.1.15",
     "async-mutex": "^0.3.1",
@@ -45,41 +48,31 @@
     "tslib": "^2.2.0"
   },
   "scripts": {
-    "build": "rm -r -f dist && yarn deps && yarn lint && yarn compile && yarn copy-src",
-    "copy-src": "mkdir -p dist && cp package.json dist && cp README.md dist && cp LICENSE dist && cp -R src dist",
-    "compile": "rollup -c rollup.config.ts",
-    "deploy": "yarn version --patch && yarn build && yarn publish ./dist --access public",
+    "build": "rm -r -f dist && yarn deps && yarn lint && yarn lint-pkg && yarn compile && yarn copy-src",
+    "copy-src": "cp package.json dist && cp README.md dist && cp LICENSE dist && cp -R src/* dist",
+    "compile": "tsc -p tsconfig.build.json && rollup -c rollup.config.ts",
+    "deploy": "yarn version --patch && yarn build && yarn publish ./dist",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "lint-pkg": "npmPkgJsonLint .",
     "fix": "eslint --ext .js,.jsx,.ts,.tsx ./src --fix",
     "test": "jest",
     "clean": "rm -f *.tsbuildinfo && rm -r -f ./dist",
     "reinstall": "rm -r -f ./node_modules && rm -f ./yarn.lock && rm -f ./yarn-error.log && yarn install && yarn outdated",
     "tsprune": "yarn ts-prune",
-    "deps": "yarn depcheck --ignores \"vue, ts-jest, @types/jest, @types/node, ts-node\""
+    "deps": "yarn depcheck"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-typescript": "^8.2.1",
     "@types/jest": "^26.0.22",
-    "@types/node": "^16",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
+    "@xylabs/eslint-config": "2.0.16",
     "depcheck": "^1.4.0",
     "eslint": "^7.24.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-json": "^3.0.0",
-    "eslint-plugin-no-secrets": "^0.8.9",
-    "eslint-plugin-prettier": "^3.2.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-sort-keys-fix": "^1.1.1",
-    "eslint-plugin-typescript-sort-keys": "^1.6.0",
-    "eslint-plugin-workspaces": "^0.6.2",
     "jest": "^27.0.1",
-    "prettier": "^2.2.1",
+    "npm-package-json-lint": "^5.1.0",
+    "npm-package-json-lint-config-default": "^3.0.0",
     "rollup": "^2.42.4",
     "ts-jest": "^27.0.0",
-    "ts-node": "^10.0.0",
     "ts-prune": "^0.9.0",
     "typescript": "^4.3.2",
     "vue": "^3.1.5"

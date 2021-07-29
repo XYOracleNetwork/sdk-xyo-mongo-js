@@ -11,12 +11,7 @@ export default [
         file: 'dist/index.cjs',
         format: 'cjs',
       },
-      {
-        exports: 'auto',
-        file: 'dist/index.js',
-        format: 'es',
-      },
     ],
-    plugins: [typescript({ tsconfig: './tsconfig.json' }), commonjs()],
+    plugins: [typescript({ tsconfig: './tsconfig.cjs.json' }), commonjs()],
   },
 ]

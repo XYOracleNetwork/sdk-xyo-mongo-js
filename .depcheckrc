@@ -1,0 +1,5 @@
+ignores: [
+  "@babel/core",
+  "npm-package-json-lint-config-default",
+  "vue"
+]
