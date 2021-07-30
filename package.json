@@ -62,7 +62,7 @@
     "deps": "yarn depcheck"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-typescript": "^8.2.1",
     "@types/jest": "^26.0.22",
     "@xylabs/eslint-config": "2.0.16",
