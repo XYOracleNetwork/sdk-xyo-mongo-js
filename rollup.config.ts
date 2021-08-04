@@ -1,4 +1,3 @@
-import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
 
 export default [
@@ -10,8 +9,9 @@ export default [
         exports: 'auto',
         file: 'dist/index.cjs',
         format: 'cjs',
+        sourcemap: true,
       },
     ],
-    plugins: [typescript({ tsconfig: './tsconfig.cjs.json' }), commonjs()],
+    plugins: [typescript({ tsconfig: './tsconfig.cjs.json' })],
   },
 ]
