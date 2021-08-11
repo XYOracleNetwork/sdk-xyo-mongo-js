@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.2.5",
-    "@types/jest": "^26.0.24",
+    "@types/jest": "^27.0.0",
     "@xylabs/eslint-config": "2.0.16",
     "depcheck": "^1.4.2",
     "eslint": "^7.32.0",
