@@ -1,3 +1,4 @@
+import { assertEx } from '@xyo-network/sdk-xyo-js'
 import { Collection, MongoClient } from 'mongodb'
 
 import BaseMongoSdkConfig from './Config'
@@ -17,12 +18,11 @@ class BaseMongoSdk<T> {
   protected async useMongo<R>(func: (client: MongoClient) => Promise<R> | R) {
     const wrapper = MongoClientWrapper.get(this.uri, this.config.maxPoolSize)
     const connection = await wrapper.connect()
-    if (connection) {
-      try {
-        return await func(connection)
-      } finally {
-        await wrapper.disconnect()
-      }
+    assertEx(connection, 'Connection failed')
+    try {
+      return await func(connection)
+    } finally {
+      await wrapper.disconnect()
     }
   }
 
