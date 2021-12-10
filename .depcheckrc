@@ -1,5 +1,7 @@
 ignores: [
   "@babel/core",
   "@xylabs/ts-scripts",
-  "npm-package-json-lint-config-default"
+  "npm-package-json-lint-config-default",
+  "@types/jest",
+  "ts-jest"
 ]
