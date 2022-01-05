@@ -56,13 +56,19 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
     "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-replace": "^3.0.1",
     "@rollup/plugin-strip": "^2.1.0",
+    "@rollup/plugin-typescript": "^8.3.0",
     "@types/bn.js": "^5.1.0",
     "@types/jest": "^27.0.2",
     "@xylabs/eslint-config": "2.1.6",
     "@xylabs/ts-scripts": "^1.0.15",
+    "@xylabs/tsconfig": "^1.0.6",
     "axios": "^0.24.0",
+    "babel-jest": "^27.4.6",
     "bn.js": "^5.2.0",
     "eslint": "^8.4.1",
     "jest": "^27.3.1",
@@ -71,9 +77,8 @@
     "prettier": "^2.5.1",
     "rollbar": "^2.24.0",
     "rollup": "^2",
-    "rollup-plugin-replace": "^2.2.0",
-    "rollup-plugin-typescript2": "^0.31.1",
     "ts-jest": "^27.0.7",
+    "tslib": "^2.3.1",
     "typescript": "^4.4.4"
   },
   "type": "module"
