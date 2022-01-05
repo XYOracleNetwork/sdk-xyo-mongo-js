@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "types": ["jest", "node", "@types/jest"]
+  },
+  "exclude": ["src/**/*.ts"],
+  "extends": "./tsconfig.build.json",
+  "include": ["src/**/*.spec.ts"],
+  "types": ["jest"]
+}

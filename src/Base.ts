@@ -12,7 +12,10 @@ class BaseMongoSdk<T> {
   }
 
   public get uri() {
-    return `mongodb+srv://${this.config.dbUserName}:${this.config.dbPassword}@${this.config.dbDomain}.mongodb.net/${this.config.dbName}?retryWrites=true&w=majority`
+    return (
+      this.config.dbConnectionString ??
+      `mongodb+srv://${this.config.dbUserName}:${this.config.dbPassword}@${this.config.dbDomain}.mongodb.net/${this.config.dbName}?retryWrites=true&w=majority`
+    )
   }
 
   public async useMongo<R>(func: (client: MongoClient) => Promise<R> | R) {
