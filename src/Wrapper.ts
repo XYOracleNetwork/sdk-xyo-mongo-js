@@ -1,4 +1,4 @@
-import { assertEx, delay } from '@xylabs/sdk-js'
+import { assertEx, delay, forget } from '@xylabs/sdk-js'
 import { Mutex } from 'async-mutex'
 import { MongoClient } from 'mongodb'
 
@@ -69,7 +69,7 @@ class MongoClientWrapper {
       assertEx(this.connections > 0, 'Unexpected disconnect')
       this.connections -= 1
       if (this.connections === 0) {
-        this.initiateClose()
+        forget(this.initiateClose())
       }
       return this.connections
     })

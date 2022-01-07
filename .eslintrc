@@ -1,6 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": ["node_modules/", "build/", "dist/", "bin/", "package.json"],
+  "ignorePatterns": ["node_modules/", "build/", "dist/", "bin/", "package.json", "src/**/*.spec.*", "rollup.config.js"],
   "extends": [
     "@xylabs"
   ],
