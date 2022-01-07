@@ -1671,9 +1671,9 @@
     ts-prune "^0.10"
 
 "@xylabs/sdk-js@^2.3.24":
-  version "2.3.24"
-  resolved "https://registry.yarnpkg.com/@xylabs/sdk-js/-/sdk-js-2.3.24.tgz#338ea9961fc6230e0c36164692aa33092ac0967c"
-  integrity sha512-A6uvGCIosM+5NFQNOZheEQv5fyLUZ7bgGqnx2saZ7xHs3kzs72DisYosFYL5sxcMHCYGg8oHpamlcEwEcQMp+Q==
+  version "2.3.25"
+  resolved "https://registry.yarnpkg.com/@xylabs/sdk-js/-/sdk-js-2.3.25.tgz#c00f43ed5db74fa1e8a32ca634975dbccc76f3d6"
+  integrity sha512-hM/Y5c4gF9oZmo+UymEq5b0AO5Tqc+foptftTV7vQlm5mM5Ufm/dYAVrkyu7V3d+bd7lj0K49QQykkOENPIG4Q==
 
 "@xylabs/ts-scripts@^1.0.24":
   version "1.0.24"
