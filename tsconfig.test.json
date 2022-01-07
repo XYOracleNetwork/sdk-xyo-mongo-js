@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "types": ["jest", "node", "@types/jest"]
+    "outDir": "dist",
+    "typeRoots": ["./node_modules/@types"]
   },
-  "exclude": ["src/**/*.ts"],
-  "extends": "./tsconfig.build.json",
-  "include": ["src/**/*.spec.ts"],
-  "types": ["jest"]
+  "exclude": ["dist/**/*"],
+  "extends": "@xylabs/tsconfig",
+  "include": ["**/*.spec.ts"]
 }
