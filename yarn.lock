@@ -1727,9 +1727,9 @@
     ts-prune "^0.10"
 
 "@xylabs/tsconfig@^1.0.8":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@xylabs/tsconfig/-/tsconfig-1.0.9.tgz#0afef919f8f9765796e56ba3e21b3772236a648a"
-  integrity sha512-WNUfdlFb4f1YCVWdHUsfgeliH7SagrasO0eWMsaa9vIQw4l+ubBDTUuVrMmVu8hEQiGq5y5uHo//BcVaAWccFQ==
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@xylabs/tsconfig/-/tsconfig-1.0.10.tgz#fc301dba3abad198917831ec21732aa11c34c4ba"
+  integrity sha512-ThMmMrgOFguqvh0osxAsC9H8RhmJ3/jOceZgqt0gaNOOrG+b6CAMUBHR+7/JcSioVYtOvrP5G/eU/QieB46DvA==
   dependencies:
     tslib "^2.3.1"
 
