@@ -1,5 +1,5 @@
 import { assertEx } from '@xylabs/sdk-js'
-import { Collection, Filter, FindCursor, MongoClient, OptionalId, OptionalUnlessRequiredId, WithId } from 'mongodb'
+import { Collection, Filter, FindCursor, MongoClient, OptionalUnlessRequiredId, WithId } from 'mongodb'
 
 import { BaseMongoSdkConfig } from './Config'
 import { MongoClientWrapper } from './Wrapper'
@@ -60,15 +60,11 @@ export class BaseMongoSdk<T> {
     })
   }
 
-  public async insertMany(items: OptionalId<T>[]) {
+  public async insertMany(items: OptionalUnlessRequiredId<T>[]) {
     return await this.useCollection(async (collection: Collection<T>) => {
-      const result = await collection.bulkWrite(
-        items.map((document: OptionalId<T>) => {
-          return { insertOne: { document } }
-        })
-      )
-      if (result.isOk()) {
-        return result.getInsertedIds()
+      const result = await collection.insertMany(items)
+      if (result.acknowledged) {
+        return result.insertedIds
       } else {
         throw Error('Insert Failed')
       }
