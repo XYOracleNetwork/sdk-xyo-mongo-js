@@ -2,7 +2,7 @@ import { assertEx, delay, forget } from '@xylabs/sdk-js'
 import { Mutex } from 'async-mutex'
 import { MongoClient } from 'mongodb'
 
-class MongoClientWrapper {
+export class MongoClientWrapper {
   private client: MongoClient
   private connectionMutex = new Mutex()
   private delayedCloseMutex = new Mutex()
@@ -86,5 +86,3 @@ class MongoClientWrapper {
     return client
   }
 }
-
-export default MongoClientWrapper
