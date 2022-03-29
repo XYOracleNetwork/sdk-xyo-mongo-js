@@ -27,7 +27,9 @@ SDK for base code for XYO Javascript Libraries that access Mongo DB.
 
 ## Maintainers
 
--   Arie Trouw
+-   [Arie Trouw](https://github.com/arietrouw) ([arietrouw.com](https://arietrouw.com))
+-   [Joel Carter](https://github.com/joelbcarter)
+-   [Matt Jones](https://github.com/jonesmac)
 
 ## License
 
