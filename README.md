@@ -2,6 +2,8 @@
 
 # sdk-xyo-mongo-js
 
+[![main-build][]][main-build-link]
+[![beta-build][]][beta-build-link]
 [![npm-badge][]][npm-link]
 [![bch-badge][]][bch-link]
 [![codacy-badge][]][codacy-link]
@@ -36,6 +38,12 @@ See the [LICENSE](LICENSE) file for license details
 Made with 🔥and ❄️ by [XYO](https://xyo.network)
 
 [logo]: https://cdn.xy.company/img/brand/XYO_full_colored.png
+
+[main-build]: https://github.com/XYOracleNetwork/sdk-xyo-mongo-js/actions/workflows/build-main.yml/badge.svg
+[main-build-link]: https://github.com/XYOracleNetwork/sdk-xyo-mongo-js/actions/workflows/build-live.yml
+
+[beta-build]: https://github.com/XYOracleNetwork/sdk-xyo-mongo-js/actions/workflows/build-beta.yml/badge.svg
+[beta-build-link]: https://github.com/XYOracleNetwork/sdk-xyo-mongo-js/actions/workflows/build-beta.yml
 
 [npm-badge]: https://img.shields.io/npm/v/@xyo-network/sdk-xyo-mongo-js.svg
 [npm-link]: https://www.npmjs.com/package/@xyo-network/sdk-xyo-mongo-js
