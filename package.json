@@ -46,9 +46,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@xylabs/sdk-js": "^2.4.2",
+    "@xylabs/sdk-js": "^2.5.5",
     "async-mutex": "^0.3.2",
-    "mongodb": "^4.4.0"
+    "mongodb": "^4.5.0"
   },
   "scripts": {
     "deploy": "yarn version patch -i && yarn build && yarn npm publish",
@@ -56,33 +56,33 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "@babel/preset-env": "^7.16.11",
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
     "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-replace": "^3.1.0",
+    "@rollup/plugin-replace": "^4.0.0",
     "@rollup/plugin-strip": "^2.1.0",
-    "@rollup/plugin-typescript": "^8.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
     "@types/bn.js": "^5.1.0",
-    "@types/jest": "^27.4.0",
-    "@xylabs/eslint-config": "2.3.16",
-    "@xylabs/rollup-config": "^1.1.7",
-    "@xylabs/ts-scripts": "^1.0.43",
-    "@xylabs/tsconfig": "^1.0.12",
-    "axios": "^0.26.0",
-    "babel-jest": "^27.5.1",
+    "@types/jest": "^27.5.0",
+    "@xylabs/eslint-config": "2.3.22",
+    "@xylabs/rollup-config": "^1.1.17",
+    "@xylabs/ts-scripts": "^1.0.65",
+    "@xylabs/tsconfig": "^1.0.13",
+    "axios": "^0.27.2",
+    "babel-jest": "^28.0.3",
     "bn.js": "^5.2.0",
     "copyfiles": "^2.4.1",
-    "eslint": "^8.9.0",
-    "jest": "^27.5.1",
-    "npm-package-json-lint": "^5.4.2",
-    "npm-package-json-lint-config-default": "^3.0.0",
-    "prettier": "^2.5.1",
+    "eslint": "^8.14.0",
+    "jest": "^28.0.3",
+    "npm-package-json-lint": "^6.3.0",
+    "npm-package-json-lint-config-default": "^5.0.0",
+    "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
-    "rollbar": "^2.24.0",
-    "rollup": "^2.67.2",
-    "ts-jest": "^27.1.3",
-    "tslib": "^2.3.1",
-    "typescript": "^4.5.5"
+    "rollbar": "^2.25.0",
+    "rollup": "^2.72.0",
+    "ts-jest": "^28.0.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4"
   },
   "packageManager": "yarn@3.1.1"
 }
