@@ -64,7 +64,7 @@
     "@rollup/plugin-typescript": "^8.3.0",
     "@types/bn.js": "^5.1.0",
     "@types/jest": "^27.4.0",
-    "@xylabs/eslint-config": "2.3.16",
+    "@xylabs/eslint-config": "2.3.28",
     "@xylabs/rollup-config": "^1.1.7",
     "@xylabs/ts-scripts": "^1.0.43",
     "@xylabs/tsconfig": "^1.0.12",
