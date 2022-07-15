@@ -59,16 +59,16 @@ export class BaseMongoSdk<T> {
     })
   }
 
-  public async updateOne(filter: Filter<T>, fields: T) {
+  public async updateOne(filter: Filter<T>, fields: Partial<T>) {
     return await this.useCollection(async (collection: Collection<T>) => {
-      return await collection.updateOne(filter, { $set: fields }, { upsert: false })
+      return await collection.updateOne(filter, fields, { upsert: false })
     })
   }
 
-  public async upsertOne(filter: Filter<T>, item: T) {
+  public async upsertOne(filter: Filter<T>, item: Partial<T>) {
     const { ...fields } = item
     return await this.useCollection(async (collection: Collection<T>) => {
-      return await collection.updateOne(filter, { $set: fields }, { upsert: true })
+      return await collection.updateOne(filter, fields, { upsert: true })
     })
   }
 }

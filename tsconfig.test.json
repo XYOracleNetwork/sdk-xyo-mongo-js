@@ -1,8 +1,4 @@
 {
-  "compilerOptions": {
-    "typeRoots": ["./node_modules/@types"]
-  },
-  "exclude": ["dist/**/*"],
-  "extends": "@xylabs/tsconfig",
+  "extends": "./tsconfig.json",
   "include": ["**/*.spec.ts"]
 }
