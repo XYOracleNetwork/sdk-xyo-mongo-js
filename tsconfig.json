@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "typeRoots": ["./node_modules/@types"]
+    "outDir": "./dist",
+    "module": "ESNext",
+    "target": "ES2022",
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["jest", "node", "@types/jest", "jest-sorted", "json-schema"]
   },
   "extends": "@xylabs/tsconfig"
 }
